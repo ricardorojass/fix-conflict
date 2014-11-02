@@ -79,6 +79,15 @@
         $('#input').val('');
       }
     });
+
+    $('.todo-list').on('click', '.complete', function(e) {
+      var li = $(this).parent();
+      if ($(this).is(':checked')) {
+        li.addClass('done');
+      } else {
+        li.removeClass('done');
+      }
+    });
   </script>
 </body>
 </html>
