@@ -80,6 +80,7 @@
       }
     });
 
+
     $('.todo-list').on('click', '.complete', function(e) {
       var li = $(this).parent();
       if ($(this).is(':checked')) {
@@ -87,6 +88,11 @@
       } else {
         li.removeClass('done');
       }
+    });
+      
+    $('.todo-list').on('click', '.delete', function(e) {
+      e.preventDefault();
+      $(this).parent().remove();
     });
   </script>
 </body>
